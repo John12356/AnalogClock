@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Montserrat:wght@100;300;400&display=swap');
+:root{
+    --bg:rgb(255, 255, 255);
+    --text:rgba(0, 0, 0,1);
+}
+:root.dark{
+    --bg:rgba(0, 0, 0,1);
+    --text :rgb(255, 255, 255);
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg);
+    position: relative;
+    transition: all ease 0.2s;
+    font-family: Montserrat;
+}
+.clock-header{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 0.4rem;
+    color: var(--text);
+    margin-top: 20px;
+}
+
+.change-mode{
+    font-family: Montserrat;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    background: none;
+    height: 35px;
+    border-radius: 5px;
+    background-color: var(--text);
+    border: 1px solid var(--text);
+    color: var(--bg);
+    letter-spacing: 0.1rem;
+    
+}
+.clock{
+    min-height: 18em;
+    min-width: 18em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.clock::before{
+    content: "";
+    height: 7px;
+    width:7px;
+    background-color: var(--text);
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10000;
+    transition: all ease 0.2s;
+}
+.hour, .min, .sec{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+.hour{
+    height: 10em;
+    width: 10em;
+}
+.hour::before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 5px;
+    background-color: var(--text);
+    border-radius: 5px;
+}
+.min{
+    height: 12em;
+    width: 12em;
+}
+.min::before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 4px;
+    background-color: var(--text);
+    border-radius: 5px;
+
+}
+.sec{
+    height: 13rem;
+    width: 13rem;
+
+}
+.sec:before{
+    content: "";
+    height: 60%;
+    width: 3px;
+    background-color: orangered;
+    border-radius: 3px;
+
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    height: 100px;
+    position: relative;
+}
+.set-time{
+    font-family: Montserrat;
+    color: var(--text);
+    font-weight: 300;
+    transition: all ease 0.2s;
+    font-size: 50px;
+    margin: 0;
+}
+.dates{
+    /* border: 1px solid black; */
+    display: flex;
+    margin: 0;
+    gap: 5px;
+    font-weight: 100;
+    font-family: Montserrat;
+    color: var(--text);
+    font-size: 14px;
+}
