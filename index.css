@@ -10,7 +10,7 @@
 body{
     box-sizing: border-box;
     margin: 0;
-    height: 96vh;
+    height: 96dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
